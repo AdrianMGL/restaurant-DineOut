@@ -28,8 +28,34 @@ window.addEventListener("scroll", function(){
 })
 
 
+/*========== MENU SECTION ===========*/
 
-/*==========  ==========*/
+const menuTabs = d.querySelector(".menu-tabs");
+menuTabs.addEventListener("click", function(e){
+  if(e.target.classList.contains("menu-tab-item") && !e.target.classList.contains("active")){
+    const target = e.target.getAttribute("data-target");
+    menuTabs.querySelector(".active").classList.remove("active");
+    e.target.classList.add("active");
+    const menuSection = d.querySelector(".menu-section");
+    menuSection.querySelector(".menu-tab-content.active").classList.remove("active");
+    menuSection.querySelector(target).classList.add("active");
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*==========  ==========*/
 
